@@ -1,15 +1,38 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
 h1 {
   text-align: center;
+}
+
+i {
+  width: 25px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+i:hover {
+  color: rgb(255, 156, 27);
+}
+
+.col button {
+  width: 100%;
 }
 
 .container {
   max-width: 380px;
 }
 
-.hidden {
+.none {
   display: none;
 }
 
-.none {
-  display: none;
+.record {
+  border: 2px solid #333333;
+  padding: 5px;
+  margin-bottom: -2px;
 }
