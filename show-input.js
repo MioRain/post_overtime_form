@@ -26,6 +26,7 @@ const breakTime = document.querySelector('#break-time')
 const overtimeReason = document.querySelector('#overtime-reason')
 const noBreakReason = document.querySelector('.no-break-reason')
 const noBreakReasonInput = document.querySelector('#no-break-reason')
+const pageHistory = document.querySelector('#pageHistory')
 const saveBtn = document.querySelector('#save-btn')
 const submitBtn = document.querySelector('#submit-btn')
 const recordBtn = document.querySelector('#record-btn')
@@ -143,8 +144,10 @@ workdayBtn.addEventListener('click', event => {
   breakTime.addEventListener('input', event => {
     if (Number(event.target.value) === 0) {
       noBreakReason.classList.remove('none')
+      pageHistory.value = '0,1'
     } else {
       noBreakReason.classList.add('none')
+      pageHistory.value = '0'
     }
   })
 
@@ -207,8 +210,10 @@ holidayBtn.addEventListener('click', event => {
   breakTime.addEventListener('input', event => {
     if (Number(event.target.value) <= 1) {
       noBreakReason.classList.remove('none')
+      pageHistory.value = '0,1'
     } else {
       noBreakReason.classList.add('none')
+      pageHistory.value = '0'
     }
   })
 
